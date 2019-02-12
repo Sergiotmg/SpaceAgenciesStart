@@ -1,4 +1,6 @@
-package com.sergio.spaceagencies;
+package com.sergio.spaceagencies.api;
+
+import com.sergio.spaceagencies.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements Controller.Server
 
         recyclerView=findViewById(R.id.recyclerView);
         adapter=new AgenciesAdapter(this);
+        // OJO LA SIGUIENTE LINEA FALTA EN MUCHOS E DE TUS PROYECTOS!!! SINO NO VA!!!
+        recyclerView.setAdapter(adapter);
 
         LinearLayoutManager layoutManager= new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

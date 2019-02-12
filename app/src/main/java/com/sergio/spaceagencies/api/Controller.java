@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sergio.spaceagencies.ResponseApi;
 import com.sergio.spaceagencies.ResponseModel;
 
 import retrofit2.Call;
@@ -52,10 +51,10 @@ public class Controller implements Callback<ResponseModel> {
         if(response.isSuccessful()) {
             ResponseModel responseModel = response.body();
             handler.onResponse(responseModel);//ya tenemos el weather en el mainactiivity
-            Log.d("controller",responseModel.getAgencies().get(0).getName());
+            Log.d("CONTROLLER",responseModel.getAgencies().get(0).getName());
             //changesList.forEach(change -> System.out.println(change.subject));
         } else {
-            Log.d("controller",response.errorBody().toString());
+            Log.d("CONTROLLER",response.errorBody().toString());
         }
     }
     @Override
