@@ -2,7 +2,7 @@ package com.sergio.spaceagencies;
 
 import java.util.List;
 
-public class Agencie {
+public class Agencies {
     private int id;
     private String name;
     private String countryCode;

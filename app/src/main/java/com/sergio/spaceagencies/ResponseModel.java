@@ -3,11 +3,11 @@ package com.sergio.spaceagencies;
 import java.util.List;
 
 public class ResponseModel {
-    public List<Agencie> getAgencies() {
+    public List<Agencies> getAgencies() {
         return agencies;
     }
 
-    public void setAgencies(List<Agencie> agencies) {
+    public void setAgencies(List<Agencies> agencies) {
         this.agencies = agencies;
     }
 
@@ -35,12 +35,12 @@ public class ResponseModel {
         this.offset = offset;
     }
 
-    private List<Agencie> agencies;
+    private List<Agencies> agencies;
     private int total;
     private int count;
     private int offset;
 
-    public ResponseModel(List<Agencie> agencies) {
+    public ResponseModel(List<Agencies> agencies) {
         this.agencies = agencies;
     }
 }
