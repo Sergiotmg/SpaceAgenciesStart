@@ -38,7 +38,18 @@ public class AgenciesAdapter extends RecyclerView.Adapter<AgenciesAdapter.Agenci
                 @Override
                 public void onClick(View v) {
                     // modificacion para mostrar to do el makeText
-                    Toast.makeText(v.getContext(), agenciesList.get(getAdapterPosition()).getCountryCode(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), agenciesList.get(getAdapterPosition()).
+                            getCountryCode(), Toast.LENGTH_SHORT).show();
+
+
+                }
+            });
+            txtName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // modificacion para mostrar to do el makeText
+                    Toast.makeText(v.getContext(), agenciesList.get(getAdapterPosition()).
+                            getName(), Toast.LENGTH_SHORT).show();
 
 
                 }
