@@ -34,6 +34,15 @@ public class AgenciesAdapter extends RecyclerView.Adapter<AgenciesAdapter.Agenci
             txtName=itemView.findViewById(R.id.txtName);
             txtAbbrev=itemView.findViewById(R.id.txtAbbrev);
             txtCountry=itemView.findViewById(R.id.txtCountry);
+            txtCountry.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // modificacion para mostrar to do el makeText
+                    Toast.makeText(v.getContext(), agenciesList.get(getAdapterPosition()).getCountryCode(), Toast.LENGTH_SHORT).show();
+
+
+                }
+            });
         }
     }
 
@@ -55,16 +64,6 @@ public class AgenciesAdapter extends RecyclerView.Adapter<AgenciesAdapter.Agenci
         vh.txtName.setText(agencies.getName());
         vh.txtCountry.setText(agencies.getCountryCode());
         vh.txtAbbrev.setText(agencies.getAbbrev());
-
-        vh.txtAbbrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), vh.txtAbbrev.getText(), Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
 
     }
 
