@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,12 +49,22 @@ public class AgenciesAdapter extends RecyclerView.Adapter<AgenciesAdapter.Agenci
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AgenciesViewHolder vh, int pos) {
+    public void onBindViewHolder(@NonNull final AgenciesViewHolder vh, int pos) {
         Agencies agencies=agenciesList.get(pos);
 
         vh.txtName.setText(agencies.getName());
         vh.txtCountry.setText(agencies.getCountryCode());
         vh.txtAbbrev.setText(agencies.getAbbrev());
+
+        vh.txtAbbrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), vh.txtAbbrev.getText(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
 
     }
 
